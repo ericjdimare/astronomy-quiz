@@ -42,3 +42,32 @@ $("#4-billion").click(function() {
   $("#q-1").hide();
   $("#q-2").removeClass("d-none");
 });
+
+//Question 2
+$("#mercury").click(function() {
+  counter -= 10;
+  $("#correct").addClass("d-none");
+  $("#incorrect").removeClass("d-none");
+  $("#q-2").hide();
+  $("#q-3").removeClass("d-none");
+});
+$("#venus").click(function() {
+  counter -= 10;
+  $("#correct").addClass("d-none");
+  $("#incorrect").removeClass("d-none");
+  $("#q-2").hide();
+  $("#q-3").removeClass("d-none");
+});
+$("#saturn").click(function() {
+  $("#correct").removeClass("d-none");
+  $("#incorrect").addClass("d-none");
+  $("#q-2").hide();
+  $("#q-3").removeClass("d-none");
+});
+$("#neptune").click(function() {
+  counter -= 10;
+  $("#correct").addClass("d-none");
+  $("#incorrect").removeClass("d-none");
+  $("#q-2").hide();
+  $("#q-3").removeClass("d-none");
+});
