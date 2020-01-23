@@ -71,3 +71,63 @@ $("#neptune").click(function() {
   $("#q-2").hide();
   $("#q-3").removeClass("d-none");
 });
+
+// Question 3
+$("#oort-cloud").click(function() {
+  $("#correct").removeClass("d-none");
+  $("#incorrect").addClass("d-none");
+  $("#q-3").hide();
+  $("q-4").removeClass("d-none");
+});
+
+$("#asteroid-belt").click(function() {
+  counter -= 10;
+  $("#incorrect").removeClass("d-none");
+  $("#correct").addClass("d-none");
+  $("#q-3").hide();
+  $("#q-4").removeClass("d-none");
+});
+$("#kuiper-belt").click(function() {
+  counter -= 10;
+  $("#incorrect").removeClass("d-none");
+  $("#correct").addClass("d-none");
+  $("#q-3").hide();
+  $("#q-4").removeClass("d-none");
+});
+$("#proxima-centauri").click(function() {
+  counter -= 10;
+  $("#incorrect").removeClass("d-none");
+  $("#correct").addClass("d-none");
+  $("#q-3").hide();
+  $("#q-4").removeClass("d-none");
+});
+
+//Question 4
+
+$("#2").click(function() {
+  counter -= 10;
+  $("#incorrect").removeClass("d-none");
+  $("#correct").addClass("d-none");
+  $("#q-4").hide();
+  $("#q-5").removeClass("d-none");
+});
+$("#4").click(function() {
+  $("#correct").removeClass("d-none");
+  $("#incorrect").addClass("d-none");
+  $("#q-4").hide();
+  $("q-5").removeClass("d-none");
+});
+$("#6").click(function() {
+  counter -= 10;
+  $("#incorrect").removeClass("d-none");
+  $("#correct").addClass("d-none");
+  $("#q-4").hide();
+  $("#q-5").removeClass("d-none");
+});
+$("#8").click(function() {
+  counter -= 10;
+  $("#incorrect").removeClass("d-none");
+  $("#correct").addClass("d-none");
+  $("#q-4").hide();
+  $("#q-5").removeClass("d-none");
+});
