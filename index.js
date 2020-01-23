@@ -3,16 +3,17 @@ let counter = 60;
 $("#start-quiz").click(function() {
   $("#start-quiz-page").hide();
   $("#q-1").removeClass("d-none");
-
-  let interval = setInterval(function() {
-    counter--;
-    $("#counter").text(counter);
-    if (counter == 0) {
-      clearInterval(interval);
-      alert("Game Over");
-    }
-  }, 1000);
+  setInterval(timer);
 });
+
+let timer = setInterval(function() {
+  counter--;
+  $("#counter").text(counter);
+  if (counter == 0) {
+    clearInterval(timer);
+    alert("Game Over");
+  }
+}, 1000);
 
 // Question 1
 $("#93-billion").click(function() {
@@ -77,7 +78,7 @@ $("#oort-cloud").click(function() {
   $("#correct").removeClass("d-none");
   $("#incorrect").addClass("d-none");
   $("#q-3").hide();
-  $("q-4").removeClass("d-none");
+  $("#q-4").removeClass("d-none");
 });
 
 $("#asteroid-belt").click(function() {
@@ -115,7 +116,7 @@ $("#4").click(function() {
   $("#correct").removeClass("d-none");
   $("#incorrect").addClass("d-none");
   $("#q-4").hide();
-  $("q-5").removeClass("d-none");
+  $("#q-5").removeClass("d-none");
 });
 $("#6").click(function() {
   counter -= 10;
@@ -130,4 +131,42 @@ $("#8").click(function() {
   $("#correct").addClass("d-none");
   $("#q-4").hide();
   $("#q-5").removeClass("d-none");
+});
+
+// Question 5
+
+$("#gas-giant").click(function() {
+  $("#correct").removeClass("d-none");
+  $("#incorrect").addClass("d-none");
+  $("#q-5").hide();
+  $("#end-game").removeClass("d-none");
+  $("#score").text(counter);
+  clearInterval(timer);
+});
+$("#terrestrial").click(function() {
+  counter -= 10;
+  $("#incorrect").removeClass("d-none");
+  $("#correct").addClass("d-none");
+  $("#q-5").hide();
+  $("#end-game").removeClass("d-none");
+  $("#score").text(counter);
+  clearInterval(timer);
+});
+$("#closer").click(function() {
+  counter -= 10;
+  $("#incorrect").removeClass("d-none");
+  $("#correct").addClass("d-none");
+  $("#q-5").hide();
+  $("#end-game").removeClass("d-none");
+  $("#score").text(counter);
+  clearInterval(timer);
+});
+$("#further").click(function() {
+  counter -= 10;
+  $("#incorrect").removeClass("d-none");
+  $("#correct").addClass("d-none");
+  $("#q-5").hide();
+  $("#end-game").removeClass("d-none");
+  $("#score").text(counter);
+  clearInterval(timer);
 });
