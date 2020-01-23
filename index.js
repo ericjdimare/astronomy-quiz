@@ -170,3 +170,15 @@ $("#further").click(function() {
   $("#score").text(counter);
   clearInterval(timer);
 });
+
+$("#highscore").click(function() {
+  $("#score-end").text(counter);
+  $("#highscoreDiv").removeClass("d-none");
+});
+
+$("#submit-score").click(function() {
+  let initialsValue = document.getElementById("initials");
+  let storedInitials = initialsValue.value;
+  $("#display-initials").append(`<li> ${storedInitials} </li>`);
+  $("#display-score").append(`<li> ${counter} </li>`);
+});
