@@ -21,18 +21,18 @@
         <li class="nav-item">
           <a class="nav-link active" href="#">High Scores</a>
         </li>
+        <li class="text-success d-none" id="correct">
+          <span>Correct</span>
+        </div>
+        <li class="text-danger d-none" id="incorrect">
+          <span>Incorrect</span>
+        </div>
         <li class="nav-item">
           <div class="nav-link" href="#">
             Timer: <span class="text-white" id="counter">0</span>
           </div>
         </li>
       </ul>
-      <div class="text-success d-none" id="correct">
-        <span>Correct</span>
-      </div>
-      <div class="text-danger d-none" id="incorrect">
-        <span>Incorrect</span>
-      </div>
     </header>
     <!-- Start Quiz Main Page-->
     <div class="container" id="start-quiz-page">
@@ -42,9 +42,9 @@
             <h1 class="display-4">Welcome to the Astronomy Quiz!</h1>
             <hr class="my-4 bg-primary" />
             <p class="lead">
-              This is a timed astronomy quiz consiting of (x) questions. Answer
-              correctly move on the the next questions ,but answer wrong and
-              lose 10 seconds off of your current time!
+              This is a timed astronomy quiz consiting of 5 questions. Answer
+              correctly, move on the the next questions. Answer wrong and lose
+              10 seconds off of your current time!
             </p>
             <button
               class="btn btn-primary btn-lg"
@@ -291,7 +291,10 @@
       </div>
     </div>
 
-    <div class="container bg-light" id="highscoreDiv">
+    <div
+      class="container bg-secondary text-white rounded d-none"
+      id="highscoreDiv"
+    >
       <div class="row">
         <div class="col-lg-6 offset-3 p-2">
           <p class="lead">You're final score is <span id="score-end"></span></p>
@@ -300,8 +303,12 @@
           </label>
           <button type="button" id="submit-score">Submit</button>
           <div class="d-flex flex-row">
-            <ul id="display-initials"></ul>
-            <ul id="display-score"></ul>
+            <ul id="display-initials">
+              <li><strong>Name:</strong></li>
+            </ul>
+            <ul id="display-score">
+              <li><strong>Score:</strong></li>
+            </ul>
           </div>
         </div>
       </div>

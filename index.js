@@ -3,7 +3,7 @@ let counter = 60;
 $("#start-quiz").click(function() {
   $("#start-quiz-page").hide();
   $("#q-1").removeClass("d-none");
-  setInterval(timer);
+  startTimer();
 });
 
 let timer = setInterval(function() {
