@@ -20,6 +20,7 @@ $("#93-billion").click(function() {
   $("#correct").removeClass("d-none");
   $("#q-1").hide();
   $("#q-2").removeClass("d-none");
+  $("#placeholder").hide();
 });
 
 $("#46-billion").click(function() {
@@ -28,6 +29,7 @@ $("#46-billion").click(function() {
   $("#incorrect").removeClass("d-none");
   $("#q-1").hide();
   $("#q-2").removeClass("d-none");
+  $("#placeholder").hide();
 });
 $("#13-billion").click(function() {
   counter -= 10;
@@ -35,6 +37,7 @@ $("#13-billion").click(function() {
   $("#incorrect").removeClass("d-none");
   $("#q-1").hide();
   $("#q-2").removeClass("d-none");
+  $("#placeholder").hide();
 });
 $("#4-billion").click(function() {
   counter -= 10;
@@ -42,6 +45,7 @@ $("#4-billion").click(function() {
   $("#incorrect").removeClass("d-none");
   $("#q-1").hide();
   $("#q-2").removeClass("d-none");
+  $("#placeholder").hide();
 });
 
 //Question 2
