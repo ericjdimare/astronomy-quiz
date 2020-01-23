@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Astronomy Quiz</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <ul class="nav d-flex justify-content-around text-primary">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">High Scores</a>
+        </li>
+        <li class="nav-item">
+          <div class="nav-link" href="#">
+            Timer: <span class="text-white" id="counter">0</span>
+          </div>
+        </li>
+      </ul>
+      <div class="text-success d-none" id="correct">
+        <span>Correct</span>
+      </div>
+      <div class="text-danger d-none" id="incorrect">
+        <span>Incorrect</span>
+      </div>
+    </header>
+    <!-- Start Quiz Main Page-->
+    <div class="container" id="start-quiz-page">
+      <div class="row">
+        <div class="col-lg-6 offset-3">
+          <div class="jumbotron text-center bg-transparent text-muted">
+            <h1 class="display-4">Welcome to the Astronomy Quiz!</h1>
+            <hr class="my-4 bg-primary" />
+            <p class="lead">
+              This is a timed astronomy quiz consiting of (x) questions. Answer
+              correctly move on the the next questions ,but answer wrong and
+              lose 10 seconds off of your current time!
+            </p>
+            <button
+              class="btn btn-primary btn-lg"
+              id="start-quiz"
+              type="button"
+            >
+              Start Quiz
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 1 -->
+    <div class="container d-none" id="q-1">
+      <div class="row">
+        <div class="col-lg-6 offset-3">
+          <div class="jumbotron text-center bg-transparent text-muted">
+            <h1 class="display-4">Question 1:</h1>
+            <hr class="my-4 bg-primary" />
+            <p class="lead">
+              What is the diameter of the Observable Universe?
+            </p>
+            <ul class="text-left">
+              <li>
+                <label>
+                  <input type="checkbox" name="93-billion" id="93-billion" /> 93
+                  Billion Light Years
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="46-billion" id="46-billion" />
+                  46 Billion Light Years
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="13-billion" id="13-billion" />
+                  13.8 Billion Light Years
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="4-billion" id="4-billion" />
+                  4.5 Billion Light Years
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="container d-none" id="q-2">
+      <div class="row">
+        <div class="col-lg-6 offset-3">
+          <div class="jumbotron text-center bg-transparent text-muted">
+            <h1 class="display-4">Question 2:</h1>
+            <hr class="my-4 bg-primary" />
+            <p class="lead">
+              Which planet is between Jupiter and Uranus?
+            </p>
+            <ul class="text-left">
+              <li>
+                <label>
+                  <input type="checkbox" name="mercury" id="mercury" /> Mercury
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="venus" id="venus" />
+                  Venus
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="saturn" id="saturn" />
+                  Saturn
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="neptune" id="neptune" />
+                  Neptune
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="container d-none" id="q-3">
+      <div class="row">
+        <div class="col-lg-6 offset-3">
+          <div class="jumbotron text-center bg-transparent text-muted">
+            <h1 class="display-4">Question 3:</h1>
+            <hr class="my-4 bg-primary" />
+            <p class="lead">
+              Where do comets come from?
+            </p>
+            <ul class="text-left">
+              <li>
+                <label>
+                  <input type="checkbox" name="oort-cloud" id="oort-cloud" />
+                  Oort Cloud
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="asteroid-belt"
+                    id="asteroid-belt"
+                  />
+                  Asteroid Belt
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="kuiper-belt  "
+                    id="kuiper-belt"
+                  />
+                  Kuiper Belt
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="proxima-centauri"
+                    id="proxima-centauri"
+                  />
+                  Proxima Centauri
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="container d-none" id="q-4">
+      <div class="row">
+        <div class="col-lg-6 offset-3">
+          <div class="jumbotron text-center bg-transparent text-muted">
+            <h1 class="display-4">Question 4:</h1>
+            <hr class="my-4 bg-primary" />
+            <p class="lead">
+              How many terrestrial planets are there?
+            </p>
+            <ul class="text-left">
+              <li>
+                <label>
+                  <input type="checkbox" name="2" id="2" />
+                  2
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="4" id="4" />
+                  4
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="6" id="6" />
+                  6
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="8" id="8" />
+                  8
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Question 5 -->
+    <div class="container d-none" id="q-5">
+      <div class="row">
+        <div class="col-lg-6 offset-3">
+          <div class="jumbotron text-center bg-transparent text-muted">
+            <h1 class="display-4">Question 4:</h1>
+            <hr class="my-4 bg-primary" />
+            <p class="lead">
+              The larger planets are:
+            </p>
+            <ul class="text-left">
+              <li>
+                <label>
+                  <input type="checkbox" name="gas-giant" id="gas-giant" />
+                  Gas Giants
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="terestrial" id="terestrial" />
+                  Terestrial
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="closer" id="closer" />
+                  Closer to the Sun
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="further" id="further" />
+                  Further from the Sun
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
