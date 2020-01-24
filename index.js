@@ -47,7 +47,7 @@ $("#start-quiz").click(function() {
   function lastQuestion() {
     $("#q-5").hide();
     $("#submit-score-div").removeClass("d-none");
-    $("#score").text(counter);
+    $("#counter").val();
     clearInterval(timer);
   }
 
@@ -147,6 +147,7 @@ $("#start-quiz").click(function() {
     lastQuestion();
   });
 });
+
 // Display Highscores DIV
 $("#highscore").click(function() {
   $("#score-end").text(counter);
@@ -161,4 +162,11 @@ $("#highscores").click(function() {
 
   // ADD initials to highscore div from submit initials button
 });
+
+$("#submit-score-hs").click(function() {
+  let initials = $("#initials").val();
+  $("#display-initials").append(initials);
+});
 // Final Score is "" <-- BLANK
+
+// $("#score-end")
