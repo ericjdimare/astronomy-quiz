@@ -4,7 +4,7 @@ $("#start-quiz").click(function() {
   $("#start-quiz-page").hide();
   $("#q-1").removeClass("d-none");
 
-  // Start Timer
+  // Start Timer - Executes all questions/answers
   let timer = setInterval(function() {
     counter--;
     $("#counter").text(counter);
@@ -46,7 +46,7 @@ $("#start-quiz").click(function() {
   }
   function lastQuestion() {
     $("#q-5").hide();
-    $("#end-game").removeClass("d-none");
+    $("#submit-score-div").removeClass("d-none");
     $("#score").text(counter);
     clearInterval(timer);
   }
@@ -147,15 +147,18 @@ $("#start-quiz").click(function() {
     lastQuestion();
   });
 });
-
+// Display Highscores DIV
 $("#highscore").click(function() {
   $("#score-end").text(counter);
   $("#highscoreDiv").removeClass("d-none");
 });
 
-$("#submit-score").click(function() {
-  let initialsValue = document.getElementById("initials");
-  let storedInitials = initialsValue.value;
-  $("#display-initials").append(`<li> ${storedInitials} </li>`);
-  $("#display-score").append(`<li> ${counter} </li>`);
+// Submit Score @ End of quiz BUTTON
+
+// Highscore Button
+$("#highscores").click(function() {
+  $("#final-scores").removeClass("d-none");
+
+  // ADD initials to highscore div from submit initials button
 });
+// Final Score is "" <-- BLANK
