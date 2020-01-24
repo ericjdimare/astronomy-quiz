@@ -47,8 +47,9 @@ $("#start-quiz").click(function() {
   function lastQuestion() {
     $("#q-5").hide();
     $("#submit-score-div").removeClass("d-none");
-    $("#counter").val();
+    $("#score-end").text(counter);
     clearInterval(timer);
+    $("#counter").text(counter);
   }
 
   // Question 1
@@ -166,6 +167,7 @@ $("#highscores").click(function() {
 $("#submit-score-hs").click(function() {
   let initials = $("#initials").val();
   $("#display-initials").append(initials);
+  $("#display-score").append(counter);
 });
 // Final Score is "" <-- BLANK
 
