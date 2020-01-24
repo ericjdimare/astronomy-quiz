@@ -166,8 +166,13 @@ $("#highscores").click(function() {
 
 $("#submit-score-hs").click(function() {
   let initials = $("#initials").val();
-  $("#display-initials").append(initials);
-  $("#display-score").append(counter);
+  let initialsLi = $("<li>");
+  let scoreLi = $("<li>");
+
+  $("#display-initials").append(initialsLi);
+  initialsLi.text(initials);
+  $("#display-score").append(scoreLi);
+  scoreLi.text(counter);
 });
 // Final Score is "" <-- BLANK
 
