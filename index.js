@@ -4,148 +4,64 @@ $("#start-quiz").click(function() {
   $("#start-quiz-page").hide();
   $("#q-1").removeClass("d-none");
 
-  // Start Timer - Executes all questions/answers
+  let answers = {
+    1: "93-Billion",
+    2: "Saturn",
+    3: "Oort-Cloud",
+    4: "4",
+    5: "Gas-Giant"
+  };
+
+  let qNum = 1;
+
   let timer = setInterval(function() {
     counter--;
     $("#counter").text(counter);
-    if (counter <= 10) {
+    if (counter <= 0) {
       clearInterval(timer);
       alert("Game Over");
     }
   }, 1000);
 
-  // Helper Functions
   function incorrect() {
     $("#correct").addClass("d-none");
     $("#incorrect").removeClass("d-none");
     counter -= 10;
   }
+
   function correct() {
     $("#correct").removeClass("d-none");
     $("#incorrect").addClass("d-none");
   }
-  function changeQuestionOne() {
-    $("#q-1").hide();
-    $("#q-2").removeClass("d-none");
+
+  function changeQuestion() {
+    let str = `#q-${qNum}`;
+    $(str).hide();
+    let nextQuestionStr = `#q-${qNum + 1}`;
+    $(nextQuestionStr).removeClass("d-none");
     $("#placeholder").hide();
   }
-  function changeQuestionTwo() {
-    $("#q-2").hide();
-    $("#q-3").removeClass("d-none");
-    $("#placeholder").hide();
-  }
-  function changeQuestionThree() {
-    $("#q-3").hide();
-    $("#q-4").removeClass("d-none");
-    $("#placeholder").hide();
-  }
-  function changeQuestionFour() {
-    $("#q-4").hide();
-    $("#q-5").removeClass("d-none");
-    $("#placeholder").hide();
-  }
-  function lastQuestion() {
-    $("#q-5").hide();
-    $("#submit-score-div").removeClass("d-none");
-    $("#score-end").text(counter);
-    clearInterval(timer);
-    $("#counter").text(counter);
-  }
 
-  // Question 1
-  $("#93-billion").click(function() {
-    correct();
-    changeQuestionOne();
-  });
+  $(".answers").click(e => {
+    if (
+      e.target.name.toLocaleLowerCase() == answers[qNum].toLocaleLowerCase()
+    ) {
+      correct();
+    } else {
+      incorrect();
+    }
 
-  $("#46-billion").click(function() {
-    incorrect();
-    changeQuestionOne();
-  });
-  $("#13-billion").click(function() {
-    incorrect();
-    changeQuestionOne();
-  });
-  $("#4-billion").click(function() {
-    incorrect();
-    changeQuestionOne();
-  });
+    if (qNum == 5) {
+      $("#q-5").hide();
+      $("#submit-score-div").removeClass("d-none");
+      $("#score-end").text(counter);
+      clearInterval(timer);
+      $("#counter").text(counter);
+    } else {
+      changeQuestion();
+    }
 
-  //Question 2
-
-  $("#mercury").click(function() {
-    incorrect();
-    changeQuestionTwo();
-  });
-  $("#venus").click(function() {
-    incorrect();
-    changeQuestionTwo();
-  });
-  $("#saturn").click(function() {
-    correct();
-    changeQuestionTwo();
-  });
-  $("#neptune").click(function() {
-    incorrect();
-    changeQuestionTwo();
-  });
-
-  // Question 3
-
-  $("#oort-cloud").click(function() {
-    correct();
-    changeQuestionThree();
-  });
-
-  $("#asteroid-belt").click(function() {
-    incorrect();
-    changeQuestionThree();
-  });
-  $("#kuiper-belt").click(function() {
-    incorrect();
-    changeQuestionThree();
-  });
-  $("#proxima-centauri").click(function() {
-    incorrect();
-    changeQuestionThree();
-  });
-
-  //Question 4
-
-  $("#2").click(function() {
-    incorrect();
-    changeQuestionFour();
-  });
-  $("#4").click(function() {
-    correct();
-    changeQuestionFour();
-  });
-  $("#6").click(function() {
-    incorrect();
-    changeQuestionFour();
-  });
-  $("#8").click(function() {
-    incorrect();
-    changeQuestionFour();
-  });
-
-  // Question 5
-
-  $("#gas-giant").click(function() {
-    correct();
-    lastQuestion();
-  });
-  $("#terrestrial").click(function() {
-    incorrect();
-    lastQuestion();
-  });
-  $("#closer").click(function() {
-    incorrect();
-    lastQuestion();
-  });
-  $("#further").click(function() {
-    incorrect();
-    lastQuestion();
+    qNum++;
   });
 });
 
@@ -155,13 +71,14 @@ $("#highscore").click(function() {
   $("#highscoreDiv").removeClass("d-none");
 });
 
-// Submit Score @ End of quiz BUTTON
-
-// Highscore Button
 $("#highscores").click(function() {
-  $("#final-scores").removeClass("d-none");
+  let finalClass = $("#final-scores").hasClass("d-none");
 
-  // ADD initials to highscore div from submit initials button
+  if (finalClass) {
+    $("#final-scores").removeClass("d-none");
+  } else {
+    $("#final-scores").addClass("d-none");
+  }
 });
 
 $("#submit-score-hs").click(function() {
@@ -173,7 +90,7 @@ $("#submit-score-hs").click(function() {
   initialsLi.text(initials);
   $("#display-score").append(scoreLi);
   scoreLi.text(counter);
-});
-// Final Score is "" <-- BLANK
 
-// $("#score-end")
+  $("#submit-score-div").hide();
+  $("#final-scores").removeClass("d-none");
+});

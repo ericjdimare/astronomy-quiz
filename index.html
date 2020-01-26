@@ -21,7 +21,7 @@
         <li class="nav-item">
           <button class="nav-link active btn btn-primary" id="highscores">High Scores</button>
         </li>
-        <li id="placeholder" class="text-white">---</li>
+        <li id="placeholder" class="text-white" style="height: 30px !important;">---</li>
         <li class="text-success d-none" id="correct">
           <span>Correct</span>
         </div>
@@ -74,25 +74,25 @@
             <ul class="text-left">
               <li>
                 <label>
-                  <input type="checkbox" name="93-billion" id="93-billion" /> 93
+                  <input type="checkbox" class="answers" class="answers" name="93-billion" id="93-billion" /> 93
                   Billion Light Years
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="46-billion" id="46-billion" />
+                  <input type="checkbox" class="answers" class="answers" name="46-billion" id="46-billion" />
                   46 Billion Light Years
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="13-billion" id="13-billion" />
+                  <input type="checkbox" class="answers" class="answers" name="13-billion" id="13-billion" />
                   13.8 Billion Light Years
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="4-billion" id="4-billion" />
+                  <input type="checkbox" class="answers" class="answers" name="4-billion" id="4-billion" />
                   4.5 Billion Light Years
                 </label>
               </li>
@@ -115,24 +115,24 @@
             <ul class="text-left">
               <li>
                 <label>
-                  <input type="checkbox" name="mercury" id="mercury" /> Mercury
+                  <input type="checkbox" class="answers" class="answers" name="mercury" id="mercury" /> Mercury
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="venus" id="venus" />
+                  <input type="checkbox" class="answers" class="answers" name="venus" id="venus" />
                   Venus
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="saturn" id="saturn" />
+                  <input type="checkbox" class="answers" class="answers" name="saturn" id="saturn" />
                   Saturn
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="neptune" id="neptune" />
+                  <input type="checkbox" class="answers" class="answers" name="neptune" id="neptune" />
                   Neptune
                 </label>
               </li>
@@ -155,14 +155,14 @@
             <ul class="text-left">
               <li>
                 <label>
-                  <input type="checkbox" name="oort-cloud" id="oort-cloud" />
+                  <input type="checkbox" class="answers" class="answers" name="oort-cloud" id="oort-cloud" />
                   Oort Cloud
                 </label>
               </li>
               <li>
                 <label>
                   <input
-                    type="checkbox"
+                    type="checkbox" class="answers" class="answers"
                     name="asteroid-belt"
                     id="asteroid-belt"
                   />
@@ -172,7 +172,7 @@
               <li>
                 <label>
                   <input
-                    type="checkbox"
+                    type="checkbox" class="answers" class="answers"
                     name="kuiper-belt  "
                     id="kuiper-belt"
                   />
@@ -182,7 +182,7 @@
               <li>
                 <label>
                   <input
-                    type="checkbox"
+                    type="checkbox" class="answers" class="answers"
                     name="proxima-centauri"
                     id="proxima-centauri"
                   />
@@ -208,25 +208,25 @@
             <ul class="text-left">
               <li>
                 <label>
-                  <input type="checkbox" name="2" id="2" />
+                  <input type="checkbox" class="answers" class="answers" name="2" id="2" />
                   2
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="4" id="4" />
+                  <input type="checkbox" class="answers" class="answers" name="4" id="4" />
                   4
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="6" id="6" />
+                  <input type="checkbox" class="answers" class="answers" name="6" id="6" />
                   6
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="8" id="8" />
+                  <input type="checkbox" class="answers" class="answers" name="8" id="8" />
                   8
                 </label>
               </li>
@@ -240,7 +240,7 @@
       <div class="row">
         <div class="col-lg-6 offset-3">
           <div class="jumbotron text-center bg-transparent text-muted">
-            <h1 class="display-4">Question 4:</h1>
+            <h1 class="display-4">Question 5:</h1>
             <hr class="my-4 bg-primary" />
             <p class="lead">
               The larger planets are:
@@ -248,25 +248,25 @@
             <ul class="text-left">
               <li>
                 <label>
-                  <input type="checkbox" name="gas-giant" id="gas-giant" />
+                  <input type="checkbox" class="answers" class="answers" name="gas-giant" id="gas-giant" />
                   Gas Giants
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="terestrial" id="terrestrial" />
+                  <input type="checkbox" class="answers" class="answers" name="terestrial" id="terrestrial" />
                   Terestrial
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="closer" id="closer" />
+                  <input type="checkbox" class="answers" class="answers" name="closer" id="closer" />
                   Closer to the Sun
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="further" id="further" />
+                  <input type="checkbox" class="answers" class="answers" name="further" id="further" />
                   Further from the Sun
                 </label>
               </li>
@@ -287,7 +287,7 @@
           <h3>Congratulations on finishing the quiz</h3>
           <p class="lead">Your final score is <span id="score-end"></span></p>
           <label for="initials" class="mb-0"
-            ><input type="text" class="form-control" id="initials" value="" />
+            ><input type="text" class="form-control" id="initials" value="" placeholder="Enter your initials..."/>
           </label>
           <button type="button" class="btn btn-primary mb-1" id="submit-score-hs">Submit</button>
           
@@ -296,7 +296,7 @@
     </div>
 
     <!-- Final High Score -->
-    <div class="container d-none border border-primary bg-dark rounded text-white mt-1" id="final-scores">
+    <div class="container d-none border border-primary bg-dark rounded text-white mt-1 pl-0" id="final-scores">
       <div class="row">
         <div class="col-lg-6 ">
           <div class="d-flex flex-row mt-3">
@@ -306,6 +306,10 @@
             <ul id="display-score">
               <li><strong>Score:</strong></li>
             </ul>
+          </div>
+           <div id="highscores-button-group" class="btn-group ml-0">
+              <button class="btn btn-info">Go Back</button>
+              <button class="btn btn-info">Clear Highscores</button>
           </div>
         </div>
       </div>
