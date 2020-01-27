@@ -4,6 +4,19 @@ $("#start-quiz").click(function() {
   $("#start-quiz-page").hide();
   $("#q-1").removeClass("d-none");
 
+  let getInitialsLocal = localStorage.getItem("initials");
+  let getscoreLocal = localStorage.getItem("score");
+  let newLiUser = $("<li>");
+  let newLiScore = $("<li>");
+
+  newLiUser.attr("class", "test");
+  newLiUser.text(getInitialsLocal);
+
+  newLiScore.attr("class", "test");
+  newLiScore.text(getscoreLocal);
+  $("#display-initials").append(newLiUser);
+  $("#display-score").append(newLiScore);
+
   let answers = {
     1: "93-Billion",
     2: "Saturn",
