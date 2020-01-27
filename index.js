@@ -85,12 +85,29 @@ $("#submit-score-hs").click(function() {
   let initials = $("#initials").val();
   let initialsLi = $("<li>");
   let scoreLi = $("<li>");
+  initialsLi.attr("class", "clear-score");
+  scoreLi.attr("class", "clear-score");
+  let initialsLocal = localStorage.setItem("initials", initials);
+  let scoreLocal = localStorage.setItem("score", counter);
+  let getInitialsLocal = localStorage.getItem("initials");
+  let getscoreLocal = localStorage.getItem("score");
 
   $("#display-initials").append(initialsLi);
-  initialsLi.text(initials);
+  initialsLi.text(getInitialsLocal);
   $("#display-score").append(scoreLi);
-  scoreLi.text(counter);
+  scoreLi.text(getscoreLocal);
 
   $("#submit-score-div").hide();
   $("#final-scores").removeClass("d-none");
+});
+
+$("#go-back").click(function() {
+  $("#start-quiz-page").show();
+  $("#final-scores").hide();
+  location.reload();
+});
+
+$("#clear-highscores").click(function() {
+  let findClearScore = $(".clear-score");
+  findClearScore.remove();
 });
