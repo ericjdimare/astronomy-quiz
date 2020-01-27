@@ -1,9 +1,4 @@
-let counter = 60;
-
-$("#start-quiz").click(function() {
-  $("#start-quiz-page").hide();
-  $("#q-1").removeClass("d-none");
-
+$(document).ready(function() {
   let getInitialsLocal = localStorage.getItem("initials");
   let getscoreLocal = localStorage.getItem("score");
   let newLiUser = $("<li>");
@@ -16,6 +11,13 @@ $("#start-quiz").click(function() {
   newLiScore.text(getscoreLocal);
   $("#display-initials").append(newLiUser);
   $("#display-score").append(newLiScore);
+});
+
+let counter = 60;
+
+$("#start-quiz").click(function() {
+  $("#start-quiz-page").hide();
+  $("#q-1").removeClass("d-none");
 
   let answers = {
     1: "93-Billion",
