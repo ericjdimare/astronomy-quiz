@@ -125,4 +125,6 @@ $("#go-back").click(function() {
 $("#clear-highscores").click(function() {
   let findClearScore = $(".clear-score");
   findClearScore.remove();
+  let findTest = $(".test");
+  findTest.remove();
 });
