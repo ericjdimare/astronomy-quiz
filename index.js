@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   let getInitialsLocal = localStorage.getItem("initials");
   let getscoreLocal = localStorage.getItem("score");
   let newLiUser = $("<li>");
@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 let counter = 60;
 
-$("#start-quiz").click(function() {
+$("#start-quiz").click(function () {
   $("#start-quiz-page").hide();
   $("#q-1").removeClass("d-none");
 
@@ -29,7 +29,7 @@ $("#start-quiz").click(function() {
 
   let qNum = 1;
 
-  let timer = setInterval(function() {
+  let timer = setInterval(function () {
     counter--;
     $("#counter").text(counter);
     if (counter <= 0) {
@@ -81,12 +81,12 @@ $("#start-quiz").click(function() {
 });
 
 // Display Highscores DIV
-$("#highscore").click(function() {
+$("#highscore").click(function () {
   $("#score-end").text(counter);
   $("#highscoreDiv").removeClass("d-none");
 });
 
-$("#highscores").click(function() {
+$("#highscores").click(function () {
   let finalClass = $("#final-scores").hasClass("d-none");
 
   if (finalClass) {
@@ -96,14 +96,12 @@ $("#highscores").click(function() {
   }
 });
 
-$("#submit-score-hs").click(function() {
+$("#submit-score-hs").click(function () {
   let initials = $("#initials").val();
   let initialsLi = $("<li>");
   let scoreLi = $("<li>");
   initialsLi.attr("class", "clear-score");
   scoreLi.attr("class", "clear-score");
-  let initialsLocal = localStorage.setItem("initials", initials);
-  let scoreLocal = localStorage.setItem("score", counter);
   let getInitialsLocal = localStorage.getItem("initials");
   let getscoreLocal = localStorage.getItem("score");
 
@@ -116,13 +114,13 @@ $("#submit-score-hs").click(function() {
   $("#final-scores").removeClass("d-none");
 });
 
-$("#go-back").click(function() {
+$("#go-back").click(function () {
   $("#start-quiz-page").show();
   $("#final-scores").hide();
   location.reload();
 });
 
-$("#clear-highscores").click(function() {
+$("#clear-highscores").click(function () {
   let findClearScore = $(".clear-score");
   findClearScore.remove();
   let findTest = $(".test");
